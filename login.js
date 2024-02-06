@@ -87,6 +87,8 @@ req.session.nome = nome;
 res.redirect('/postagem');
 
 
+
+
 // CREATE
 app.post('/add', (req, res) => {
   const { name } = req.body;
@@ -118,6 +120,21 @@ res.send('Credenciais incorretas. <a href="/">Tente novamente</a>');
 }
 });
 });
+
+
+
+app.get('/postagem', (req, res) => {
+ 
+        
+       
+  res.sendFile(__dirname + '/postagem.html');
+  
+ 
+
+
+     });
+
+
 
 app.get('/dash', (req, res) => {
 
